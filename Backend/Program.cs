@@ -77,15 +77,15 @@ namespace Backend
 
             builder.Services.AddSignalR();
 
-            //builder.Services.AddSingleton(provider =>
-            //{
-            //    return new EmailService(
-            //        smtpHost: "smtp.gmail.com",
-            //        smtpPort: 587,
-            //        fromEmail: "t98838629@gmail.com",
-            //        fromPassword: "utgaffswjsrxnewa"
-            //    );
-            //});
+            builder.Services.AddSingleton(provider =>
+            {
+                return new EmailService(
+                    smtpHost: Env.GetString("SMTP_HOST"),
+                    smtpPort: Env.GetInt("SMTP_PORT"), 
+                    fromEmail: Env.GetString("FROM_EMAIL"),
+                    fromPassword: Env.GetString("FROM_PASSWORD")
+                );
+            });
 
             builder.Services.AddCors(options =>
             {

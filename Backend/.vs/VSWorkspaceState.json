@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\BusinessLogic",
+    "\\Presentaion",
+    "\\Presentaion\\Controllers"
   ],
-  "SelectedNode": "\\ChatHub.cs",
+  "SelectedNode": "\\Backend.sln",
   "PreviewInSolutionExplorer": false
 }
